@@ -1,0 +1,247 @@
+.orders_page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--color-txt);
+}
+
+.orders_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #11141b 0%, #0f1419 100%);
+  border: 1px solid rgba(74, 215, 255, 0.2);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.orders_header h1 {
+  margin: 0;
+  font-size: 28px;
+  background: linear-gradient(135deg, var(--color-txt), var(--color-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+}
+
+.orders_panel {
+  background: radial-gradient(circle at 20% 20%, rgba(74, 215, 255, 0.08), transparent 40%),
+    linear-gradient(135deg, #0d1117 0%, #0c1015 100%);
+  border: 1px solid rgba(74, 215, 255, 0.2);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.panel_top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.search_box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(74, 215, 255, 0.08);
+  border: 1px solid rgba(74, 215, 255, 0.25);
+  padding: 10px 12px;
+  border-radius: 10px;
+  min-width: 280px;
+}
+
+.search_box input {
+  background: transparent;
+  color: var(--color-txt);
+  width: 100%;
+}
+
+.pill {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(74, 215, 255, 0.15);
+  border: 1px solid rgba(74, 215, 255, 0.3);
+  font-size: 12px;
+  color: var(--color-blue);
+}
+
+.status_filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter_chip {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(74, 215, 255, 0.2);
+  color: var(--color-txt);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter_chip:hover {
+  border-color: var(--color-blue);
+  box-shadow: var(--shadow);
+}
+
+.filter_chip.active {
+  background: rgba(74, 215, 255, 0.18);
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+  box-shadow: inset 0 0 12px rgba(74, 215, 255, 0.25);
+}
+
+.table_wrap {
+  overflow: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(74, 215, 255, 0.2);
+}
+
+.orders_table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.orders_table thead {
+  background: rgba(74, 215, 255, 0.08);
+}
+
+.orders_table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.orders_table td {
+  padding: 14px 16px;
+  border-top: 1px solid rgba(74, 215, 255, 0.12);
+  color: var(--color-txt);
+}
+
+.orders_table tr:hover {
+  background: rgba(74, 215, 255, 0.06);
+}
+
+.customer_cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(74, 215, 255, 0.35), rgba(74, 215, 255, 0.15));
+  border: 1px solid rgba(74, 215, 255, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #0a0c10;
+}
+
+.customer_name {
+  margin: 0;
+  font-weight: 700;
+}
+
+.customer_email {
+  margin: 2px 0 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+}
+
+.mono {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  letter-spacing: 0.5px;
+}
+
+.status_badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  border: 1px solid transparent;
+}
+
+.status_paid {
+  color: #21e6a1;
+  background: rgba(33, 230, 161, 0.12);
+  border-color: rgba(33, 230, 161, 0.35);
+}
+
+.status_pending {
+  color: #f5c451;
+  background: rgba(245, 196, 81, 0.12);
+  border-color: rgba(245, 196, 81, 0.35);
+}
+
+.status_shipped {
+  color: #4ad7ff;
+  background: rgba(74, 215, 255, 0.12);
+  border-color: rgba(74, 215, 255, 0.35);
+}
+
+.status_refunded {
+  color: #f97373;
+  background: rgba(249, 115, 115, 0.12);
+  border-color: rgba(249, 115, 115, 0.35);
+}
+
+.action_btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.empty_state {
+  padding: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.empty_state span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 900px) {
+  .orders_header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel_top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search_box {
+    width: 100%;
+  }
+
+  .orders_table {
+    min-width: 100%;
+  }
+}
