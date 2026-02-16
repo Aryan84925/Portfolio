@@ -1,0 +1,48 @@
+ .toast-banner {
+ 	position: fixed;
+ 	top: 16px;
+ 	left: 50%;
+ 	transform: translateX(-50%);
+ 	background: #111827;
+ 	color: #f8fafc;
+ 	padding: 12px 16px;
+ 	border-radius: 12px;
+ 	box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
+ 	display: flex;
+ 	align-items: center;
+ 	gap: 12px;
+ 	z-index: 1200;
+ 	font-size: 0.95rem;
+ }
+
+ .toast-banner.success {
+ 	background: #0f172a;
+ 	border: 1px solid rgba(16, 185, 129, 0.45);
+ }
+
+.toast-banner.info {
+	background: #0f172a;
+	border: 1px solid rgba(56, 189, 248, 0.45);
+}
+
+ .toast-banner button {
+ 	border: none;
+ 	background: rgba(255, 255, 255, 0.1);
+ 	color: #f8fafc;
+ 	width: 28px;
+ 	height: 28px;
+ 	border-radius: 8px;
+ 	cursor: pointer;
+ 	font-weight: 700;
+ }
+
+ .toast-banner button:hover {
+ 	background: rgba(255, 255, 255, 0.2);
+ }
+
+ @media (max-width: 640px) {
+ 	.toast-banner {
+ 		width: calc(100% - 32px);
+ 		justify-content: space-between;
+ 	}
+ }
