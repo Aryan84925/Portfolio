@@ -10,18 +10,18 @@ import AdminSetting from "./Admin/AdminSetting/AdminSetting.jsx";
 import AdminAnalytics from "./Admin/AdminAnalytics/AdminAnalytics.jsx";
 import AdminOrders from "./Admin/AdminOrders/AdminOrders.jsx";
 
-export default function AppRouter({ isAdmin }) {
+export default function AppRouter({  }) {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/admin" element={isAdmin ? <Admin /> : <Navigate to="/login" replace />}>
+      <Route path="/admin" element={<Admin />}>
         <Route index element={<AdminDashbord />} />
-        <Route path="/admin/products" element={<AdminProducts />} />
-        <Route path="/admin/orders" element={<AdminOrders />} />
-        <Route path="/admin/users" element={<AdminUsers />} />
-        <Route path="/admin/analytics" element={<AdminAnalytics />} />
-        <Route path="/admin/settings" element={<AdminSetting />} />
+        <Route path="products" element={<AdminProducts />} />
+        <Route path="orders" element={<AdminOrders />} />
+        <Route path="users" element={<AdminUsers />} />
+        <Route path="analytics" element={<AdminAnalytics />} />
+        <Route path="settings" element={<AdminSetting />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
